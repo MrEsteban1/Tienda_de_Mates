@@ -1,0 +1,63 @@
+.paginaNosotros {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "presentacionProducto"
+      "ubicaciones"
+      "footerInicio";
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 600px 1fr 100px;
+  }
+
+  #sobreNostros {
+    background-color: rgb(109, 152, 134);
+    color: rgb(33, 33, 33);
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  #sobreNostros h2 {
+    text-transform: uppercase;
+    color: rgb(73, 72, 72);
+    letter-spacing: 2 5px;
+  }
+  
+  #sobreNostros p {
+    color: rgb(73, 72, 72);
+    line-height: 1.6;
+  }
+  
+  .infoNosotros {
+    background-image: url("https://img4.goodfon.com/wallpaper/nbig/4/1c/mate-water-yerba-mate.jpg");
+    background-color: rgb(172, 172, 172);
+    background-blend-mode: lighten;
+    width: 50%;
+    margin: 2% 25% 0px 25%;
+    padding: 25px;
+  }
+  
+  #ubicaciones {
+    grid-area: ubicaciones;
+    background-color: rgb(217, 202, 179);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+  }
+  
+  .ubicacion {
+    background-color: rgb(212, 212, 212);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    margin: 10px;
+  }
+  .ubicacion img {
+    border: solid 10px rgb(174, 182, 165);
+  }

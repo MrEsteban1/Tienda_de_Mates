@@ -1,0 +1,38 @@
+/*------PALETA COLORES--------*/
+
+$paleta_negro: #212121;
+$paleta_verde: #6d9886;
+$paleta_beige: #d9cab3;
+$paleta_white: #f6f6f6;
+
+/*-------- Colores Generales -------*/
+
+/* Articulo Inicio */
+$blanco_menu: #e9dede;
+$articulo_fondo: rgb(77, 82, 72);
+$articulo_item_fondo: rgb(217, 202, 179);
+
+$colores: (
+    negro: $paleta_negro,
+    verde: $paleta_verde,
+    beige: $paleta_beige,
+    blanco: $paleta_white
+);
+
+@each $nombre, $color in $colores{
+    .fondo-#{$nombre}{
+        background-color: $color;
+    }
+}
+
+@each $nombre, $color in $colores {
+    .letra-#{$nombre}{
+        color: $color;
+    }
+}
+
+@each $nombre, $color in $colores{
+    .border-#{$nombre}{
+        border: solid 3px $color;
+    }
+}

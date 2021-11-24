@@ -1,0 +1,16 @@
+#preguntasFrecuentes {
+    background-color: rgb(109, 152, 134);
+    color: rgb(33, 33, 33);
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+  .pregunta {
+    margin-bottom: 20px;
+    background-color: $paleta_white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
+  

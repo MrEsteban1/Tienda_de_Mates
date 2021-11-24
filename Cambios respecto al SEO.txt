@@ -1,0 +1,6 @@
+Notas de agregado:
+
+- Se agrego keywords y descriptions en el head en cada pagina.
+- se arreglaron los titulos de forma jerarquica.
+- Se organizaron las carpetas de forma comoda.
+- Se optimizaron las imagenes para que tengan menor peso.
