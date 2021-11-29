@@ -1,103 +1,114 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 /*Tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1300px) {
-    #paginaInicio {
-      grid-template-areas:
-        "header"
-        "presentacion"
-        "productosInicio"
-        "aside"
-        "footerInicio";
-      grid-template-columns: 1fr;
-      grid-template-rows: 120px 400px 150px 300px 100px;
-    }
-  
-    .infoPrincipal {
-      background-color: rgba(165, 159, 146, 0.685);
-      height: 155px;
-      width: 170px;
-      padding: 10px;
-      overflow: visible;
-    }
-    .infoPrincipal h3 {
-      font-size: 27px;
-    }
-  
-    .infoPrincipal img {
-      width: 150px;
-      height: 150px;
-    }
-    header li {
-      padding: 10px;
-    }
-    header h1 {
-      font-size: 25px;
-    }
-    .articulo {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    nav {
+      display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: right;
+      ul {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding: 10px;
+        float: right;
+        height: 0px;
+        a {
+          list-style-type: none;
+          text-decoration: none;
+          color: whitesmoke;
+
+          li {
+            list-style: none;
+            padding: 10px;
+
+            margin: 0;
+            font-weight: bold;
+            display: inline;
+            transition: all 0.5s;
+          }
+        }
+        li:hover {
+          padding: 20px;
+          background-color: rgb(119, 118, 118);
+          color: antiquewhite;
+        }
+      }
+    }
+    h1 {
+      color: $blanco_menu;
+      margin-left: 1%;
+      margin: 0.2%;
+      margin-top: 0;
+      display: inline;
+    }
+    img {
+      @include size(50px, 50px);
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.6;
+      margin: 0;
     }
   }
-  
-  /*Mobile*/
-  @media only screen and (max-width: 767px) {
-    .articulo {
+}
+
+/*Mobile*/
+@media only screen and (max-width: 767px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    nav {
+      display: flex;
       flex-direction: row;
+      align-items: right;
+      ul {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding: 10px;
+        float: right;
+        height: 0px;
+        a {
+          list-style-type: none;
+          text-decoration: none;
+          color: whitesmoke;
+
+          li {
+            list-style: none;
+            padding: 10px;
+
+            margin: 0;
+            font-weight: bold;
+            display: inline;
+            transition: all 0.5s;
+          }
+        }
+        li:hover {
+          padding: 20px;
+          background-color: rgb(119, 118, 118);
+          color: antiquewhite;
+        }
+      }
     }
-    .articulo div {
-      background-color: rgba(217, 202, 179, 0.808);
-  
-      justify-content: row;
-      transform: scale(0.8, 0.8);
+    h1 {
+      color: $blanco_menu;
+      margin-left: 1%;
+      margin: 0.2%;
+      margin-top: 0;
+      display: inline;
     }
-    /*
-    .articulo div img {
-      height: 75px;
-      width: 75px;
-      padding: 50px;
-    }
-    .articulo h3 {
-      margin: -10px;
-      font-size: 15px;
-      justify-content: stretch;
-      color: white;
-    }
-  */
-    #paginaInicio {
-      grid-template-areas:
-        "header"
-        "presentacion"
-        "productosInicio"
-        "aside"
-        "footerInicio";
-      grid-template-columns: 1fr;
-      grid-template-rows: 120px 400px 150px 250px 100px;
-    }
-    header li {
-      padding: 10px;
-    }
-  
-    header h1 {
-      font-size: 20px;
-    }
-    header img {
-      height: 90px;
-      width: 90px;
-    }
-  
-    .infoPrincipal {
-      background-color: rgba(165, 159, 146, 0.685);
-      height: 150px;
-      width: 120px;
-      padding: 10px;
-      overflow: visible;
-    }
-    .infoPrincipal h3 {
-      font-size: 20px;
-    }
-  
-    .infoPrincipal img {
-      width: 110px;
-      height: 120px;
+    img {
+      @include size(50px, 50px);
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.6;
+      margin: 0;
     }
   }
-  
+}
