@@ -21,9 +21,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    div {
-      width: 100%;
-    }
 
     h2 {
       font-size: 40px;
@@ -76,11 +73,11 @@
         padding: 10px;
         margin: 15px;
         border: none;
-        background-color: rgb(230, 228, 228);
+        background-color: $paleta_white - 50;
         font-weight: bold;
       }
       input:hover {
-        background-color: rgb(184, 183, 183);
+        background-color: $paleta_white - 50 + 40;
       }
 
       .imgProducto {
@@ -93,46 +90,76 @@
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1300px) {
-  #paginaInicio {
-    display: grid;
-    grid-template-areas:
-      "header"
-      "presentacion"
-      "articulo"
-      "productosInicio"
-      "footerInicio";
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px 480px 230px 130px 100px;
-    .presentacionWeb {
+  .paginaProducto {
+    .presentacionProducto {
+      padding: 50px 10px;
       h2 {
-        margin: 20px;
-        font-size: 20px;
+        transform: scale(0.5, 0.5);
+        font-size: 40px;
+        background-color: rgb(246, 246, 246);
+        margin: 30px 0px;
+        transform: skew(15deg);
+        background: linear-gradient(
+          75deg,
+          rgb(189, 186, 186),
+          rgb(231, 231, 231)
+        );
+        @include size(250px, 50px);
+      }
+
+      .productos {
+        background-color: red;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .producto {
+        transform: scale(0.7, 0.7);
+
+        @include size(270px, 370px);
+        margin-bottom: 30px;
+        margin-right: -3%;
+        margin-left: -3%;
       }
     }
   }
+}
 
-  .infoPrincipal {
-    background-color: $paleta_negro;
-    width: 130px;
-    height: 100px;
-    overflow: visible;
-    h3 {
-      font-size: 27px;
-      color: white;
+@media only screen and (max-width: 767px) {
+  .paginaProducto {
+    .presentacionProducto {
+      padding: 50px 10px;
+      h2 {
+        transform: scale(0.5, 0.5);
+        font-size: 40px;
+        background-color: rgb(246, 246, 246);
+        margin: 30px 0px;
+        transform: skew(15deg);
+        background: linear-gradient(
+          75deg,
+          rgb(189, 186, 186),
+          rgb(231, 231, 231)
+        );
+        @include size(250px, 50px);
+      }
+
+      .productos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .producto {
+        transform: scale(0.7, 0.7);
+
+        @include size(270px, 370px);
+        margin-bottom: 30px;
+        margin-right: -5%;
+        margin-left: -5%;
+      }
     }
-    img {
-      width: 100px;
-      height: 220px;
-    }
-  }
-  header li {
-    padding: 10px;
-  }
-  header h1 {
-    font-size: 25px;
-  }
-  .articulo {
-    flex-direction: row;
-    align-items: center;
   }
 }

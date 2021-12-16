@@ -72,18 +72,17 @@ header {
     padding-top: 60px;
     float: right;
     height: 100px;
-    a {
-      list-style-type: none;
-      text-decoration: none;
-      color: whitesmoke;
-
-      li {
-        list-style: none;
-        padding: 40px;
-        margin: 0;
-        font-weight: bold;
-        display: inline;
-        transition: all 0.5s;
+    li {
+      list-style: none;
+      padding: 40px;
+      margin: 0;
+      font-weight: bold;
+      display: inline;
+      transition: all 0.5s;
+      a {
+        list-style-type: none;
+        text-decoration: none;
+        color: whitesmoke;
       }
     }
     li:hover {

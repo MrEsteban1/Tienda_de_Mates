@@ -19,19 +19,18 @@
         padding: 10px;
         float: right;
         height: 0px;
-        a {
-          list-style-type: none;
-          text-decoration: none;
-          color: whitesmoke;
+        li {
+          list-style: none;
+          padding: 10px;
 
-          li {
-            list-style: none;
-            padding: 10px;
-
-            margin: 0;
-            font-weight: bold;
-            display: inline;
-            transition: all 0.5s;
+          margin: 0;
+          font-weight: bold;
+          display: inline;
+          transition: all 0.5s;
+          a {
+            list-style-type: none;
+            text-decoration: none;
+            color: whitesmoke;
           }
         }
         li:hover {
@@ -74,19 +73,19 @@
         padding: 10px;
         float: right;
         height: 0px;
-        a {
-          list-style-type: none;
-          text-decoration: none;
-          color: whitesmoke;
+        li {
+          list-style: none;
+          padding: 10px;
+          font-size: 10px;
+          margin: 0;
+          font-weight: bold;
+          display: inline;
+          transition: all 0.5s;
 
-          li {
-            list-style: none;
-            padding: 10px;
-
-            margin: 0;
-            font-weight: bold;
-            display: inline;
-            transition: all 0.5s;
+          a {
+            list-style-type: none;
+            text-decoration: none;
+            color: whitesmoke;
           }
         }
         li:hover {

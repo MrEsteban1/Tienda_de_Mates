@@ -78,7 +78,7 @@
 
 #paginaInicio {
   display: grid;
-  grid-template-areas: "header header" "articulo presentacion" "productosInicio productosInicio" "footerInicio footerInicio";
+  grid-template-areas: "header header" "articulo presentacion" "productosInicio productosInicio" "footerInicio footerInicio";
   grid-template-columns: 150px 4fr;
   grid-template-rows: 120px 4fr 1fr 70px; }
 
@@ -161,11 +161,13 @@
 @media only screen and (min-width: 768px) and (max-width: 1300px) {
   #paginaInicio {
     display: grid;
-    grid-template-areas: "header" "presentacion" "articulo" "productosInicio" "footerInicio";
+    grid-template-areas: "header" "presentacion" "articulo" "productosInicio" "footerInicio";
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 480px 230px 130px 100px; }
+    grid-template-rows: 120px 1fr 230px 130px 100px; }
     #paginaInicio .presentacionWeb h2 {
       margin: 20px;
+      font-size: 20px; }
+    #paginaInicio #productos h2 {
       font-size: 20px; }
   .infoPrincipal {
     background-color: #212121;
@@ -190,7 +192,7 @@
 @media only screen and (max-width: 767px) {
   #paginaInicio {
     display: grid;
-    grid-template-areas: "header" "presentacion" "articulo" "productosInicio" "footerInicio";
+    grid-template-areas: "header" "presentacion" "articulo" "productosInicio" "footerInicio";
     grid-template-columns: 1fr;
     grid-template-rows: 120px 1fr 230px 130px 100px; }
     #paginaInicio .presentacionWeb h2 {
@@ -199,6 +201,7 @@
     #paginaInicio .presentacionWeb h4 {
       display: none; }
   .infoPrincipal {
+    transform: scale(0.8, 0.8);
     background-color: #212121;
     width: 30px;
     height: 50px;
@@ -215,11 +218,13 @@
     font-size: 25px; }
   .articulo {
     flex-direction: row;
-    align-items: center; } }
+    align-items: center; }
+  #productos h2 {
+    font-size: 20px; } }
 
 .paginaProducto {
   display: grid;
-  grid-template-areas: "header" "presentacionProducto" "footerInicio";
+  grid-template-areas: "header" "presentacionProducto" "footerInicio";
   grid-template-columns: 1fr;
   grid-template-rows: 120px 1fr 90px; }
   .paginaProducto .presentacionProducto {
@@ -231,8 +236,6 @@
     display: flex;
     flex-direction: column;
     text-align: center; }
-    .paginaProducto .presentacionProducto div {
-      width: 100%; }
     .paginaProducto .presentacionProducto h2 {
       font-size: 40px;
       background-color: #f6f6f6;
@@ -274,10 +277,10 @@
         padding: 10px;
         margin: 15px;
         border: none;
-        background-color: #e6e4e4;
+        background-color: #c4c4c4;
         font-weight: bold; }
       .paginaProducto .presentacionProducto .producto input:hover {
-        background-color: #b8b7b7; }
+        background-color: #ececec; }
       .paginaProducto .presentacionProducto .producto .imgProducto {
         width: 300px;
         height: 250px;
@@ -286,120 +289,282 @@
         border: solid 2px #212121; }
 
 @media only screen and (min-width: 768px) and (max-width: 1300px) {
-  #paginaInicio {
-    display: grid;
-    grid-template-areas: "header" "presentacion" "articulo" "productosInicio" "footerInicio";
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px 480px 230px 130px 100px; }
-    #paginaInicio .presentacionWeb h2 {
-      margin: 20px;
-      font-size: 20px; }
-  .infoPrincipal {
-    background-color: #212121;
-    width: 130px;
-    height: 100px;
-    overflow: visible; }
-    .infoPrincipal h3 {
-      font-size: 27px;
-      color: white; }
-    .infoPrincipal img {
-      width: 100px;
-      height: 220px; }
-  header li {
-    padding: 10px; }
-  header h1 {
-    font-size: 25px; }
-  .articulo {
-    flex-direction: row;
-    align-items: center; } }
+  .paginaProducto .presentacionProducto {
+    padding: 50px 10px; }
+    .paginaProducto .presentacionProducto h2 {
+      transform: scale(0.5, 0.5);
+      font-size: 40px;
+      background-color: #f6f6f6;
+      margin: 30px 0px;
+      transform: skew(15deg);
+      background: linear-gradient(75deg, #bdbaba, #e7e7e7);
+      width: 250px;
+      height: 50px; }
+    .paginaProducto .presentacionProducto .productos {
+      background-color: red;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .paginaProducto .presentacionProducto .producto {
+      transform: scale(0.7, 0.7);
+      width: 270px;
+      height: 370px;
+      margin-bottom: 30px;
+      margin-right: -3%;
+      margin-left: -3%; } }
+
+@media only screen and (max-width: 767px) {
+  .paginaProducto .presentacionProducto {
+    padding: 50px 10px; }
+    .paginaProducto .presentacionProducto h2 {
+      transform: scale(0.5, 0.5);
+      font-size: 40px;
+      background-color: #f6f6f6;
+      margin: 30px 0px;
+      transform: skew(15deg);
+      background: linear-gradient(75deg, #bdbaba, #e7e7e7);
+      width: 250px;
+      height: 50px; }
+    .paginaProducto .presentacionProducto .productos {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .paginaProducto .presentacionProducto .producto {
+      transform: scale(0.7, 0.7);
+      width: 270px;
+      height: 370px;
+      margin-bottom: 30px;
+      margin-right: -5%;
+      margin-left: -5%; } }
 
 .paginaNosotros {
   display: grid;
   grid-template-areas: "header" "presentacionProducto" "ubicaciones" "footerInicio";
   grid-template-columns: 1fr;
-  grid-template-rows: 120px 600px 1fr 100px; }
-
-#sobreNostros {
-  background-color: #6d9886;
-  color: #212121;
-  padding: 20px;
-  margin: 0;
-  text-align: center; }
-
-#sobreNostros h2 {
-  text-transform: uppercase;
-  color: #494848;
-  letter-spacing: 2 5px; }
-
-#sobreNostros p {
-  color: #494848;
-  line-height: 1.6; }
-
-.infoNosotros {
-  background-image: url("https://img4.goodfon.com/wallpaper/nbig/4/1c/mate-water-yerba-mate.jpg");
-  background-color: #acacac;
-  background-blend-mode: lighten;
-  width: 50%;
-  margin: 2% 25% 0px 25%;
-  padding: 25px; }
-
-#ubicaciones {
-  grid-area: ubicaciones;
-  background-color: #d9cab3;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  padding: 40px; }
-
-.ubicacion {
-  background-color: #d4d4d4;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 500px;
-  margin: 10px; }
-
-.ubicacion img {
-  border: solid 10px #aeb6a5; }
-
-#preguntasFrecuentes {
-  background-color: #6d9886;
-  color: #212121;
-  padding: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; }
-  #preguntasFrecuentes .pregunta {
-    margin-bottom: 20px;
-    background-color: #f6f6f6;
+  grid-template-rows: 120px 1fr 1fr 100px; }
+  .paginaNosotros #sobreNostros {
+    background-color: #6d9886;
+    color: #212121;
     padding: 20px;
-    margin-top: 20px; }
-
-#seccionContacto {
-  background-color: #6d9886;
-  color: #212121;
-  padding: 20px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  #seccionContacto #seccionContacto label {
-    font-weight: bold; }
-  #seccionContacto #contactoForm {
-    background-color: rgba(217, 202, 179, 0.808);
-    width: 70%;
+    margin: 0;
+    text-align: center; }
+    .paginaNosotros #sobreNostros h2 {
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      color: #494848;
+      letter-spacing: 2 5px; }
+    .paginaNosotros #sobreNostros p {
+      color: #242424;
+      line-height: 1.6; }
+    .paginaNosotros #sobreNostros .infoNosotros {
+      background-image: url("https://img4.goodfon.com/wallpaper/nbig/4/1c/mate-water-yerba-mate.jpg");
+      background-color: #cac8c8;
+      background-blend-mode: lighten;
+      width: 50%;
+      margin: 2% 25% 0px 25%;
+      padding: 25px; }
+  .paginaNosotros #ubicaciones {
+    grid-area: ubicaciones;
+    background-color: #d9cab3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px; }
+  .paginaNosotros .ubicacion {
+    background-color: #d4d4d4;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    border-radius: 2%;
+    height: 500px;
     margin: 10px; }
+  .paginaNosotros .ubicacion img {
+    border: solid 10px #aeb6a5; }
+
+/*Mobile*/
+@media only screen and (max-width: 767px) {
+  .paginaNosotros {
+    display: grid;
+    grid-template-areas: "header" "presentacionProducto" "ubicaciones" "footerInicio";
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px 1000px 1fr 100px; }
+    .paginaNosotros p {
+      color: #131212;
+      line-height: 1.6; } }
+
+#paginaInformacion {
+  display: grid;
+  grid-template-areas: "header" "preguntasFrecuentes" "ubicaciones" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 140px 1fr 1fr 90px; }
+  #paginaInformacion #preguntasFrecuentes {
+    grid-area: preguntasFrecuentes;
+    background-color: #6d9886;
+    color: #212121;
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    #paginaInformacion #preguntasFrecuentes .pregunta {
+      margin-bottom: 20px;
+      background-color: #f6f6f6;
+      padding: 20px;
+      margin-top: 20px; }
+  #paginaInformacion #ubicaciones {
+    grid-area: ubicaciones;
+    background-color: #d9cab3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px; }
+  #paginaInformacion .ubicacion {
+    background-color: #d4d4d4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    margin: 10px; }
+  #paginaInformacion .ubicacion img {
+    border: solid 10px #aeb6a5; }
+  #paginaInformacion footer {
+    grid-area: footer; }
+
+/*------PALETA COLORES--------*/
+/*-------- Colores Generales -------*/
+/* Articulo Inicio */
+.fondo-negro {
+  background-color: #212121; }
+
+.fondo-verde {
+  background-color: #6d9886; }
+
+.fondo-beige {
+  background-color: #d9cab3; }
+
+.fondo-blanco {
+  background-color: #f6f6f6; }
+
+.letra-negro {
+  color: #212121; }
+
+.letra-verde {
+  color: #6d9886; }
+
+.letra-beige {
+  color: #d9cab3; }
+
+.letra-blanco {
+  color: #f6f6f6; }
+
+.border-negro {
+  border: solid 3px #212121; }
+
+.border-verde {
+  border: solid 3px #6d9886; }
+
+.border-beige {
+  border: solid 3px #d9cab3; }
+
+.border-blanco {
+  border: solid 3px #f6f6f6; }
+
+#paginaContacto {
+  display: grid;
+  grid-template-areas: "header" "seccionProducto" "footerInicio";
+  grid-template-columns: 1fr;
+  grid-template-rows: 130px 1fr 90px; }
+  #paginaContacto #seccionContacto {
+    grid-area: seccionProducto;
+    background-color: #6d9886;
+    color: #212121;
+    padding: 50px;
+    margin: 0;
+    display: flex;
+    font-size: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #paginaContacto #seccionContacto #contactoForm {
+      font-size: medium;
+      background-color: #d9cab3;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: center;
+      padding: 20px;
+      border-radius: 2%;
+      margin: 10px; }
+      #paginaContacto #seccionContacto #contactoForm form {
+        width: 30%; }
+        #paginaContacto #seccionContacto #contactoForm form label {
+          font-style: #212121;
+          font-weight: bold; }
+        #paginaContacto #seccionContacto #contactoForm form input {
+          padding: 10px;
+          margin-top: 8px;
+          border: none;
+          border-bottom: solid;
+          background-color: #fcedd6;
+          color: black;
+          width: 100%; }
+        #paginaContacto #seccionContacto #contactoForm form input::placeholder {
+          color: #212121; }
+        #paginaContacto #seccionContacto #contactoForm form select {
+          padding: 10px;
+          margin-top: 8px;
+          border: none;
+          background-color: #fcedd6;
+          color: black;
+          width: 100%; }
+        #paginaContacto #seccionContacto #contactoForm form .botonForm {
+          border: solid #c4c4c4;
+          background-color: #cecece; }
+        #paginaContacto #seccionContacto #contactoForm form .botonForm:hover {
+          border: solid #d8d8d8;
+          background-color: #e2e2e2; }
+        #paginaContacto #seccionContacto #contactoForm form h3 {
+          font-size: medium; }
+        #paginaContacto #seccionContacto #contactoForm form div {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row; }
+          #paginaContacto #seccionContacto #contactoForm form div label {
+            font-weight: normal; }
+        #paginaContacto #seccionContacto #contactoForm form textarea {
+          padding: 10px;
+          margin-top: 8px;
+          border: none;
+          background-color: #fcedd6;
+          color: black;
+          width: 100%; }
+        #paginaContacto #seccionContacto #contactoForm form textarea::placeholder {
+          color: #212121; }
+    #paginaContacto #seccionContacto footer {
+      grid-area: footer; }
+
+@media only screen and (max-width: 767px) {
+  #paginaContacto #seccionContacto {
+    padding: 0px;
+    padding-top: 20px; }
+    #paginaContacto #seccionContacto #contactoForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
+      padding: 10px 0px;
+      margin: 10px 0px; }
+      #paginaContacto #seccionContacto #contactoForm form {
+        width: 75%; } }
 
 /*Tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1300px) {
@@ -417,17 +582,17 @@
         padding: 10px;
         float: right;
         height: 0px; }
-        header nav ul a {
-          list-style-type: none;
-          text-decoration: none;
-          color: whitesmoke; }
-          header nav ul a li {
-            list-style: none;
-            padding: 10px;
-            margin: 0;
-            font-weight: bold;
-            display: inline;
-            transition: all 0.5s; }
+        header nav ul li {
+          list-style: none;
+          padding: 10px;
+          margin: 0;
+          font-weight: bold;
+          display: inline;
+          transition: all 0.5s; }
+          header nav ul li a {
+            list-style-type: none;
+            text-decoration: none;
+            color: whitesmoke; }
         header nav ul li:hover {
           padding: 20px;
           background-color: #777676;
@@ -462,17 +627,18 @@
         padding: 10px;
         float: right;
         height: 0px; }
-        header nav ul a {
-          list-style-type: none;
-          text-decoration: none;
-          color: whitesmoke; }
-          header nav ul a li {
-            list-style: none;
-            padding: 10px;
-            margin: 0;
-            font-weight: bold;
-            display: inline;
-            transition: all 0.5s; }
+        header nav ul li {
+          list-style: none;
+          padding: 10px;
+          font-size: 10px;
+          margin: 0;
+          font-weight: bold;
+          display: inline;
+          transition: all 0.5s; }
+          header nav ul li a {
+            list-style-type: none;
+            text-decoration: none;
+            color: whitesmoke; }
         header nav ul li:hover {
           padding: 20px;
           background-color: #777676;
@@ -526,17 +692,17 @@ header {
     padding-top: 60px;
     float: right;
     height: 100px; }
-    header ul a {
-      list-style-type: none;
-      text-decoration: none;
-      color: whitesmoke; }
-      header ul a li {
-        list-style: none;
-        padding: 40px;
-        margin: 0;
-        font-weight: bold;
-        display: inline;
-        transition: all 0.5s; }
+    header ul li {
+      list-style: none;
+      padding: 40px;
+      margin: 0;
+      font-weight: bold;
+      display: inline;
+      transition: all 0.5s; }
+      header ul li a {
+        list-style-type: none;
+        text-decoration: none;
+        color: whitesmoke; }
     header ul li:hover {
       padding: 50px;
       background-color: #777676;

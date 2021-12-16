@@ -1,15 +1,54 @@
-#preguntasFrecuentes {
-  background-color: rgb(109, 152, 134);
-  color: rgb(33, 33, 33);
-  padding: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+#paginaInformacion {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "preguntasFrecuentes"
+    "ubicaciones"
+    "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 140px 1fr 1fr 90px;
 
-  .pregunta {
-    margin-bottom: 20px;
-    background-color: $paleta_white;
+  #preguntasFrecuentes {
+    grid-area: preguntasFrecuentes;
+    background-color: rgb(109, 152, 134);
+    color: rgb(33, 33, 33);
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .pregunta {
+      margin-bottom: 20px;
+      background-color: $paleta_white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  }
+  #ubicaciones {
+    grid-area: ubicaciones;
+    background-color: rgb(217, 202, 179);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+  }
+
+  .ubicacion {
+    background-color: rgb(212, 212, 212);
     padding: 20px;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    margin: 10px;
+  }
+  .ubicacion img {
+    border: solid 10px rgb(174, 182, 165);
+  }
+  footer {
+    grid-area: footer;
   }
 }

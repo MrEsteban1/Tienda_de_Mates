@@ -116,10 +116,15 @@
       "productosInicio"
       "footerInicio";
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 480px 230px 130px 100px;
+    grid-template-rows: 120px 1fr 230px 130px 100px;
     .presentacionWeb {
       h2 {
         margin: 20px;
+        font-size: 20px;
+      }
+    }
+    #productos {
+      h2 {
         font-size: 20px;
       }
     }
@@ -175,6 +180,7 @@
   }
 
   .infoPrincipal {
+    transform: scale(0.8, 0.8);
     background-color: $paleta_negro;
     width: 30px;
     height: 50px;
@@ -197,5 +203,10 @@
   .articulo {
     flex-direction: row;
     align-items: center;
+  }
+  #productos {
+    h2 {
+      font-size: 20px;
+    }
   }
 }
